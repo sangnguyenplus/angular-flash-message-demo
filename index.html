@@ -32,6 +32,8 @@
                         <ul class="nav navbar-nav">
                             <li><a ui-sref="success-page">Trang báo thành công</a></li>
                             <li><a ui-sref="error-page">Trang báo lỗi</a></li>
+                            <li><a ui-sref="warning-page">Trang cảnh báo</a></li>
+                            <li><a ui-sref="info-page">Trang thông báo hiển thị thông tin</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
@@ -43,16 +45,37 @@
                     </div>
                 </div>
             </div>
-            <div flash-alert="error" active-class="in alert-flash" class="fade">
-                <button type="button" class="close" ng-click="hide()">&times;</button>
-                <strong class="alert-heading">Thông báo!</strong>
-                <span class="alert-message">{{ flash.message }}</span>
-            </div>
+            <!-- Hiển thị thông báo thành công-->
 
             <div flash-alert="success" active-class="in alert-flash" class="fade ">
                 <button type="button" class="close" ng-click="hide()">&times;</button>
                 <strong class="alert-heading">Thông báo!</strong>
-                <span class="alert-message">{{ flash.message }}</span>
+                <span class="alert-message" ng-bind="flash.message"></span>
+            </div>
+
+
+            <!-- Hiển thị thông báo lỗi-->
+
+            <div flash-alert="error" active-class="in alert-flash" class="fade ">
+                <button type="button" class="close" ng-click="hide()">&times;</button>
+                <strong class="alert-heading">Thông báo!</strong>
+                <span class="alert-message" ng-bind="flash.message"></span>
+            </div>
+
+            <!-- Hiển thị thông báo warning-->
+
+            <div flash-alert="warn" active-class="in alert-flash" class="fade ">
+                <button type="button" class="close" ng-click="hide()">&times;</button>
+                <strong class="alert-heading">Thông báo!</strong>
+                <span class="alert-message" ng-bind="flash.message"></span>
+            </div>
+
+            <!-- Hiển thị thông báo thông tin-->
+
+            <div flash-alert="info" active-class="in alert-flash" class="fade ">
+                <button type="button" class="close" ng-click="hide()">&times;</button>
+                <strong class="alert-heading">Thông báo!</strong>
+                <span class="alert-message" ng-bind="flash.message"></span>
             </div>
             <footer>
                 <div class="container">

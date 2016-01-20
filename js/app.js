@@ -29,6 +29,16 @@ var app = angular.module('appDemo', [
                 url: '/error-page.html',
                 templateUrl: 'views/error.html',
                 controller: 'ErrorController'
+            })
+            .state('info-page', {
+                url: '/info-page.html',
+                templateUrl: 'views/info.html',
+                controller: 'InfoController'
+            })
+            .state('warning-page', {
+                url: '/warning-page.html',
+                templateUrl: 'views/warning.html',
+                controller: 'WarningController'
             });
         $locationProvider.html5Mode({
             enabled: true,
@@ -43,5 +53,11 @@ var app = angular.module('appDemo', [
 }])
 .controller('ErrorController', ['$scope', '$http', 'flash', function($scope, $http, flash) {
     flash.error = 'Bạn đã được chuyển hướng tới trang thông báo lỗi. Thông báo này sẽ tự mất sao vài giây!';
+}])
+.controller('InfoController', ['$scope', '$http', 'flash', function($scope, $http, flash) {
+    flash.info = 'Bạn đã được chuyển hướng tới trang thông báo hiển thị thông tin. Thông báo này sẽ tự mất sao vài giây!';
+}])
+.controller('WarningController', ['$scope', '$http', 'flash', function($scope, $http, flash) {
+    flash.warn = 'Bạn đã được chuyển hướng tới trang thông báo dạng warning. Thông báo này sẽ tự mất sao vài giây!';
 }]);
 
