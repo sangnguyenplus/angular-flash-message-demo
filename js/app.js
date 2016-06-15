@@ -17,27 +17,27 @@ var app = angular.module('appDemo', [
     function($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
             .state('home', {
-                url: '/',
-                templateUrl: './angular-flash-message-demo/views/home.html'
+                url: 'angular-flash-message-demo//',
+                templateUrl: 'views/home.html'
             })
             .state('success-page', {
-                url: 'success-page.html',
-                templateUrl: './angular-flash-message-demo/views/success.html',
+                url: 'angular-flash-message-demo/success-page.html',
+                templateUrl: 'views/success.html',
                 controller: 'SuccessController'
             })
             .state('error-page', {
-                url: 'error-page.html',
-                templateUrl: './angular-flash-message-demo/views/error.html',
+                url: 'angular-flash-message-demo/error-page.html',
+                templateUrl: 'views/error.html',
                 controller: 'ErrorController'
             })
             .state('info-page', {
-                url: 'info-page.html',
-                templateUrl: './angular-flash-message-demo/views/info.html',
+                url: 'angular-flash-message-demo/info-page.html',
+                templateUrl: 'views/info.html',
                 controller: 'InfoController'
             })
             .state('warning-page', {
-                url: 'warning-page.html',
-                templateUrl: './angular-flash-message-demo/views/warning.html',
+                url: 'angular-flash-message-demo/warning-page.html',
+                templateUrl: 'views/warning.html',
                 controller: 'WarningController'
             });
         $locationProvider.html5Mode({
