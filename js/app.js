@@ -21,22 +21,22 @@ var app = angular.module('appDemo', [
                 templateUrl: 'views/home.html'
             })
             .state('success-page', {
-                url: '/success-page.html',
+                url: 'success-page.html',
                 templateUrl: 'views/success.html',
                 controller: 'SuccessController'
             })
             .state('error-page', {
-                url: '/error-page.html',
+                url: 'error-page.html',
                 templateUrl: 'views/error.html',
                 controller: 'ErrorController'
             })
             .state('info-page', {
-                url: '/info-page.html',
+                url: 'info-page.html',
                 templateUrl: 'views/info.html',
                 controller: 'InfoController'
             })
             .state('warning-page', {
-                url: '/warning-page.html',
+                url: 'warning-page.html',
                 templateUrl: 'views/warning.html',
                 controller: 'WarningController'
             });
