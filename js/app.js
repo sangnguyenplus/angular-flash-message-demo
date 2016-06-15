@@ -18,26 +18,26 @@ var app = angular.module('appDemo', [
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'views/home.html'
+                templateUrl: 'angular-flash-message-demo/views/home.html'
             })
             .state('success-page', {
                 url: 'success-page.html',
-                templateUrl: 'views/success.html',
+                templateUrl: 'angular-flash-message-demo/views/success.html',
                 controller: 'SuccessController'
             })
             .state('error-page', {
                 url: 'error-page.html',
-                templateUrl: 'views/error.html',
+                templateUrl: 'angular-flash-message-demo/views/error.html',
                 controller: 'ErrorController'
             })
             .state('info-page', {
                 url: 'info-page.html',
-                templateUrl: 'views/info.html',
+                templateUrl: 'angular-flash-message-demo/views/info.html',
                 controller: 'InfoController'
             })
             .state('warning-page', {
                 url: 'warning-page.html',
-                templateUrl: 'views/warning.html',
+                templateUrl: 'angular-flash-message-demo/views/warning.html',
                 controller: 'WarningController'
             });
         $locationProvider.html5Mode({
